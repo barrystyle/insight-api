@@ -19,15 +19,12 @@ program
   .version(config.version);
 
 // text title
-console.log(
-  '\n\
-    ____           _       __    __     ___          _ \n\
-   /  _/___  _____(_)___ _/ /_  / /_   /   |  ____  (_)\n\
-   / // __ \\/ ___/ / __ `/ __ \\/ __/  / /\| \| / __ \\/ / \n\
- _/ // / / (__  ) / /_/ / / / / /_   / ___ |/ /_/ / /  \n\
-/___/_/ /_/____/_/\\__, /_/ /_/\\__/  /_/  |_/ .___/_/   \n\
-                 /____/                   /_/           \n\
-\n\t\t\t\t\t\tv%s\n', config.version);
+console.log('                                                   .__  ');
+console.log('  _____   ___________  ____   ____   _____  ______ |__| ');
+console.log(' /     \\_/ __ \\_  __ \\/ ___\\_/ __ \\  \\__  \\ \\____ \\|  | ');
+console.log('|  Y Y  \\  ___/|  | \\/ /_/  >  ___/   / __ \\|  |_> >  | ');
+console.log('|__|_|  /\\___  >__|  \\___  / \\___  > (____  /   __/|__| ');
+console.log('      \\/     \\/     /_____/      \\/       \\/|__|        \n');
 program.on('--help', function() {
   logger.info('\n# Configuration:\n\
 \tINSIGHT_NETWORK (Network): %s\n\
@@ -146,7 +143,7 @@ require('./config/routes')(expressApp);
 
 //Start the app by listening on <port>
 server.listen(config.port, function() {
-  logger.info('insight server listening on port %d in %s mode', server.address().port, process.env.NODE_ENV);
+  logger.info('merge-api server listening on port %d in %s mode', server.address().port, process.env.NODE_ENV);
 });
 
 //expose app
